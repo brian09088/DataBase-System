@@ -16,3 +16,14 @@ Listen 8080
 2. 點選change password 設定新的密碼(因為原本設定沒有密碼)
 ```
 - 7. 記得設定好之後，要去control panel -> apache -> config -> phpMyAdmin(config.ini.php) 看到password那行，原先空白記得修改為剛剛設定的新密碼
+
+## 為了確保大家可以最低限度的執行 PHP ，我們先寫一支 echo 測試程式，程式如下：
+以 XAMPP 為例，請在路徑 XAMPP/htdocs 底下新增一個 「connect.php」檔案，
+``` PHP
+<?php
+  echo "我是誰?"
+?>
+```
+由於網址路徑與檔案路徑相同，所以可以這樣寫
+接下來，存檔並進入網址 (http://localhost/connect.php)
+連接成功
