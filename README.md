@@ -4,8 +4,8 @@ using XAMPP control panel, including SQL, Apache. Try to create DB and write sys
 - 1. 下載並安裝完成(資料夾解壓縮與分類整理)[XAMPP](https://www.apachefriends.org/zh_tw/download.html)
 - 2. 打開程式設定檔，根據步驟安裝完成後，打開control panel
 - 3. 這邊要注意如果mysql 按下start後，admin按下去連結到php_admin 的主機localhost如果沒有反應(顯示無法連接)時，我們要打開apache的config 
-- 4. 找到(httpd.conf)
-- 5. 修改閘道管路，這邊把port : 80 改成port : 8080
+  - 找到(httpd.conf)
+  - 修改閘道管路，這邊把port : 80 改成port : 8080
 ```
 #Listen 12.34.56.78:8080
 Listen 8080
