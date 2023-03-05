@@ -2,7 +2,7 @@
 
 ## 參考下列表格，以SQL回答下列的查詢
 註(自行理解)
-- EMP表示employee number員工編號 
+- EMP表示employee number 員工編號 
 - DEP表示department number 部門編號
 ``` SQL
 EMP (emp#, name, dept#, job, manager#, salary, age)
@@ -41,11 +41,38 @@ FROM EMP
 GROUP BY job;
 ```
 - 6.	列出所有的員工姓名和他們所屬的部門位置。
-
+``` SQL
+SELECT EMP.name,DEP.location
+FROM EMP
+INNER join DEP /*INNER JOIN (內部連接) 為等值連接，必需指定等值連接的條件*/
+ON EMP.dept# = DEP.dept#
+```
 - 7.	如果有員工的薪水超過他(她)的主管，則列出他（她）的姓名和他(她)主管的姓名。
-
+``` SQL
+SELECT E1.name AS employee_name, E2.name AS manager_name
+FROM EMP E1 
+INNER JOIN EMP E2 ON E1.manager# = E2.emp#
+WHERE E1.salary > E2.salary
+```
 - 8.	找出所有在Columbus且薪水平均小於20000的部門，按照部門的平均薪水遞減排列，依序列出這些部門的部門編號和平均薪水。
-
+``` SQL
+SELECT dept#, AVG(salary) AS avg_salary
+FROM EMP e JOIN DEP d ON e.dept# = d.dept#
+WHERE location = 'Columbus'
+GROUP BY dept#
+HAVING AVG(salary) < 20000
+ORDER BY avg_salary DESC;
+```
 - 9.	將沒有員工的部門從DEP表格中剔除。
-
+``` SQL
+DELETE FROM DEP WHERE dept# NOT IN (SELECT dept# FROM EMP);
+```
 - 10.	調整EMP表格中的員工薪水(如果此人有出現Candidate表格中 )，調漲百分之十。
+``` SQL
+UPDATE EMP 
+SET salary = salary * 1.1 
+WHERE emp# IN (
+  SELECT emp# 
+  FROM CANDIDATE
+);
+```
