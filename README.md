@@ -1,4 +1,4 @@
-# DataBase-System-PHP-
+# DataBase-System-PHP/SQL
 using XAMPP control panel, including SQL, Apache. Try to create DB and write systems.
 ## 安裝注意事項
 - 1. 下載並安裝完成(資料夾解壓縮與分類整理)[XAMPP](https://www.apachefriends.org/zh_tw/download.html)
