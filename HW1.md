@@ -1,7 +1,9 @@
 # 2023-Spring HW1
 
 ## 參考下列表格，以SQL回答下列的查詢
-(註:EMP表示employee DEP表示department)
+註(自行理解)
+EMP表示employee number員工編號 
+DEP表示department number 部門編號
 ``` SQL
 EMP (emp#, name, dept#, job, manager#, salary, age)
 DEP (dept#, dname, location)
@@ -21,7 +23,11 @@ WHERE dept# = 40
 ORDER BY emp#;
 ```
 - 3.	找出年紀大於30的clerks的平均薪水為多少。
-
+``` SQL
+SELECT AVG(salary)
+FROM EMP
+WHERE job = 'clerk' AND age > 30;
+```
 - 4.	多少不同的工作是由部門40的員工來執行的？
 
 - 5.	列出所有的工作和每個工作的平均薪水。
