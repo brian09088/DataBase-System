@@ -2,8 +2,8 @@
 
 ## 參考下列表格，以SQL回答下列的查詢
 註(自行理解)
-EMP表示employee number員工編號 
-DEP表示department number 部門編號
+- EMP表示employee number員工編號 
+- DEP表示department number 部門編號
 ``` SQL
 EMP (emp#, name, dept#, job, manager#, salary, age)
 DEP (dept#, dname, location)
@@ -29,7 +29,11 @@ FROM EMP
 WHERE job = 'clerk' AND age > 30;
 ```
 - 4.	多少不同的工作是由部門40的員工來執行的？
-
+``` SQL
+SELECT COUNT(DISTINCT job)
+FROM EMP
+WHERE dept# = 40;
+```
 - 5.	列出所有的工作和每個工作的平均薪水。
 
 - 6.	列出所有的員工姓名和他們所屬的部門位置。
