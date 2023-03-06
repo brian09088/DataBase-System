@@ -1,4 +1,4 @@
-# ER Model:
+# 1. ER Model:
 
 ## *Entities:*
 
@@ -23,3 +23,17 @@
 - Customer: customer#
 - Item: item#
 - Order: order#
+
+# 2. (E-R model)Diagram:
+![image](https://user-images.githubusercontent.com/72643996/223040220-12ff1664-ce0c-42f3-9eaa-df2b0cab3ef7.png)
+
+# 3. Functional Dependency Diagram:
+
+# 4. 3NF Database:
+
+- Customer (customer#, name, address)
+- Item (item#, unit-price, amount-in-stock)
+- Order (order#, date received, customer#)
+- OrderItem (order#, item#, quantity ordered)
+
+In the 3NF database, the Orders table has been normalized by removing the non-key attribute quantity ordered and placing it in a separate table OrderItem, which has a composite primary key consisting of the order# and item#. This ensures that there is no redundancy in the database and that data is stored efficiently.
