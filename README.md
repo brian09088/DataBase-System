@@ -1,6 +1,9 @@
 # DataBase-System-PHP/SQL
-using XAMPP control panel, including SQL, Apache. Try to create DB and write systems.
-## 安裝注意事項
+[CSE-585/course link](https://db.cse.nsysu.edu.tw/?course=dbs) 
+ * account & pw is not public released !
+
+## using XAMPP control panel, including SQL, Apache. Try to create DB and systems.
+### 安裝注意事項
 - 1. 下載並安裝完成(資料夾解壓縮與分類整理)[XAMPP](https://www.apachefriends.org/zh_tw/download.html)
 - 2. 打開程式設定檔，根據步驟安裝完成後，打開control panel
 - 3. 這邊要注意如果mysql 按下start後，admin按下去連結到php_admin 的主機localhost如果沒有反應(顯示無法連接)時，我們要打開apache的config 
