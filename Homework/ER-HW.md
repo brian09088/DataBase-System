@@ -28,7 +28,12 @@
 ![image](https://user-images.githubusercontent.com/72643996/223040220-12ff1664-ce0c-42f3-9eaa-df2b0cab3ef7.png)
 
 # 3. Functional Dependency Diagram:
-
+```
+Customer# --> Name, Address
+Item# --> Unit-price, Amount-in-stock
+Order# --> Customer#, Date received
+(Order#, Item#) --> Quantity ordered
+```
 # 4. 3NF Database:
 
 - Customer (customer#, name, address)
