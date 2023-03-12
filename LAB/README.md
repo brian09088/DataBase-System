@@ -1,4 +1,4 @@
-# SQL file(Download from phpMyAdmin)
+# schedule & progress / time line
 
 - 2023/02/13~2023/03/07 
 
