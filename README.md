@@ -33,8 +33,8 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 ?>
 ```
 由於網址路徑與檔案路徑相同，所以可以這樣寫
-接下來，存檔並進入網址 (http://localhost/connect.php)
-連接網頁成功
+接下來，存檔並進入網址 (http://localhost/connect.php) 連接網頁成功
+
 **未來若要繼續上傳到網址，我們將會使用connect.php來做編輯與上傳資料**
 
 ## php執行網頁的中間流程架構如下
