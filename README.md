@@ -30,3 +30,8 @@ Listen 8080
 由於網址路徑與檔案路徑相同，所以可以這樣寫
 接下來，存檔並進入網址 (http://localhost/connect.php)
 連接成功
+
+## php執行網頁的中間流程架構如下
+
+![image](https://user-images.githubusercontent.com/72643996/224519400-2135fabc-ff37-4b03-a9a3-609342f9a1a1.png)
+
