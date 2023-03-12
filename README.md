@@ -41,3 +41,38 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 
 ![image](https://user-images.githubusercontent.com/72643996/224519400-2135fabc-ff37-4b03-a9a3-609342f9a1a1.png)
 
+- 1. 若您要用 PHP 來連接 SQL 資料庫，可以使用以下的步驟：
+連接到 SQL 資料庫：使用 mysqli_connect 函式來建立到 SQL 資料庫的連接。這個函式需要指定主機名稱、使用者名稱、密碼和資料庫名稱等相關參數。例如：
+``` php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// 建立連接
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// 檢查連接是否成功
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+```
+- 2. 執行 SQL 查詢：使用 mysqli_query 函式來執行 SQL 查詢。這個函式需要指定已建立的資料庫連接和要執行的 SQL 查詢語句。例如：
+``` php
+$sql = "SELECT * FROM myTable";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // 輸出每一行的資料
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
+    }
+} else {
+    echo "0 results";
+}
+```
+- 3. 關閉資料庫連接：使用 mysqli_close 函式來關閉資料庫連接。例如：
+``` php
+// 關閉連接
+mysqli_close($conn);
+```
