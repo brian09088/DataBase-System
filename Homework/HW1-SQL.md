@@ -61,7 +61,7 @@ FROM EMP e JOIN DEP d ON e.dept# = d.dept#
 WHERE location = 'Columbus'
 GROUP BY dept#
 HAVING AVG(salary) < 20000
-ORDER BY avg_salary DESC; //遞增是ASC
+ORDER BY avg_salary DESC; --遞增是ASC
 ```
 - 9.	將沒有員工的部門從DEP表格中剔除。
 ``` SQL
