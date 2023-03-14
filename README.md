@@ -45,8 +45,8 @@ Cookie 可以儲存的地方有兩個：記憶體或硬體內。記憶體 Cookie
 ?>
 ```
 由於網址路徑與檔案路徑相同，所以可以這樣寫
-例如我在htdocs資料夾下面寫了index.html，這樣一來可以進入(http://localhost/index.html)
-接下來，存檔並進入網址 (http://localhost/connect.php) 連接網頁成功
+例如我在htdocs資料夾下面寫了index.html，這樣一來可以進入(http://localhost/index.html),
+ (http://localhost/connect.php) 連接網頁成功
 
 **未來若要繼續上傳到網址，我們將會使用connect.php來做編輯與上傳資料**
 
