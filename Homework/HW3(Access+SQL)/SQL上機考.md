@@ -42,7 +42,7 @@ create index name on table(oID)
 ```
 - 新增欄位
 ```SQL
-alter table add name 資料型別
+alter table add column name 資料型別
 ```
 - 刪除欄位
 ```SQL
