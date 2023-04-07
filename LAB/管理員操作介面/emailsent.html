@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset = "utf-8">
+<head>
+    <style type="emailsent.css">
+            .field {
+                margin-bottom: 10px;
+            }
+    
+            .field label {
+                display: block;
+                font-size: 12px;
+                color: #777;
+            }
+    
+            .field input {
+                display: block;
+                min-width: 250px;
+                line-height: 1.5;
+                font-size: 14px;
+            }
+    
+            input[type="submit"] {
+                display: block;
+                padding: 6px 30px;
+                font-size: 14px;
+                background-color: #19347e;
+                color: #fff;
+                border: none
+            }
+    </style>
+</head>
+
+<form id="form">
+    <div class="field">
+      <label for="借閱書籍">借閱書籍</label>
+      <input type="借閱書籍" name="借閱書籍" id="借閱書籍">
+    </div>
+    <div class="field">
+      <label for="還書期限">還書期限</label>
+      <input type="還書期限" name="還書期限" id="還書期限">
+    </div>
+    <div class="field">
+      <label for="姓名">姓名</label>
+      <input type="姓名" name="姓名" id="姓名">
+    </div>
+    <div class="field">
+      <label for="學號">學號</label>
+      <input type="學號" name="學號" id="學號">
+    </div>
+    <div class="field">
+      <label for="guest_name">guest_name</label>
+      <input type="text" name="guest_name" id="guest_name">
+    </div>
+  
+    <input type="submit" id="button" value="Send Email" >
+  </form>
+  
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('xfmx5S-C53lblmIc_')
+  </script>
+
+  <script>
+    const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_aeerc6y';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+  </script>
