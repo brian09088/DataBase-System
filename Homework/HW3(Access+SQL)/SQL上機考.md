@@ -8,7 +8,7 @@
 - 改變資料表名稱(結構與欄位不變)
 ``` sql
 alter table name_1
-rename name_2
+rename to name_2
 ```
 
 - 新增欄位、結構成為一份新的資料表
