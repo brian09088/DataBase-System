@@ -1,6 +1,4 @@
 # DataBase-System-PHP/SQL
-[CSE-585/course link](https://db.cse.nsysu.edu.tw/?course=dbs) 
- * account & pw is not public released !
 
 ## using XAMPP control panel, including SQL, Apache. Try to create DB and systems.
 ### 安裝注意事項
