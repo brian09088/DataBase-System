@@ -3,6 +3,15 @@
 - 可以用access做驗證
 - 15分鐘
 - 分為5題(查詢、更新、新增建立、刪除、困難題)
+## 幾種常見語法
+- select 欄位名稱 from 資料表 where 給定條件
+- 子查詢 : where 欄位名稱 = (select + from + where))
+- 子查詢 : where private-key in (select + from + where)
+- count(欄位名稱) 計算數量
+- distinct(欄位名稱) 避免重複
+- order by ASC/DESC (由上至下，遞增遞減排序條件)
+- group by : 結合其他欄位
+- having : 附加條件
 
 ## 新增/刪除索引與變更資料表
 - 改變資料表名稱(結構與欄位不變)
@@ -62,3 +71,4 @@ drop index name on table
 ```sql
 drop table name
 ```
+
