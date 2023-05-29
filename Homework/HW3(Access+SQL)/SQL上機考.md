@@ -41,7 +41,10 @@ into newname
 from oldname
 where buyer='blah';
 ```
-- 插入新的訂單紀錄
+- 插入新的訂單紀錄(從別處資料表新增資料(詳細資訊)/從別處複製到此新增)
+```sql
+insert into 資料表名稱 select (a,b,c,d,e) from 使用者 where name='123'
+```
 ```sql
 insert into name
 where buyer='blah';
