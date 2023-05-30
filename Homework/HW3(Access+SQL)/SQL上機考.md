@@ -13,12 +13,13 @@ Where customer.name not in (
 							Select customer-name 
 							From Depositor);
 ```
-- not exists (後面接子查詢，欄位名稱未定，看是否存在其中)
+- where not exists (後面接子查詢，欄位名稱未定，看是否存在其中)
 ```
 Select distinct customer-name
 From Borrow
 Where not exists (Select *  
-		 	 From Depositor
+		  From Depositor
+		  Where Depositor.customer-name = Borrow.customer-name);
 ```
 - 子查詢 : where 欄位名稱 = (select + from + where))
 - 子查詢 : where private-key in (select + from + where)
