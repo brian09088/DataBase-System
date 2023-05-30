@@ -5,6 +5,21 @@
 - 分為5題(查詢、更新、新增建立、刪除、困難題)
 ## 幾種常見語法
 - select 欄位名稱 from 資料表 where 給定條件
+- not in (後面接子查詢，欄位名稱已定)
+```sql
+Select distinct customer-name
+From Borrow
+Where customer.name not in (
+							Select customer-name 
+							From Depositor);
+```
+- not exists (後面接子查詢，欄位名稱未定，看是否存在其中)
+```
+Select distinct customer-name
+From Borrow
+Where not exists (Select *  
+		 	 From Depositor
+```
 - 子查詢 : where 欄位名稱 = (select + from + where))
 - 子查詢 : where private-key in (select + from + where)
 - count(欄位名稱) 計算數量
